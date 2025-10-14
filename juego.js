@@ -49,7 +49,7 @@ function cargarPartida() {
 }
 
 // Función principal del juego
-function iniciarJuego() {
+function iniciarJuego(escenaInicial) {
   // === MENÚ PRINCIPAL ===
   alert("=== El Tesoro del Castillo ===");
   const opcionMenu = prompt("1) Nueva partida\n2) Cargar partida\n3) Salir");
@@ -72,9 +72,6 @@ function iniciarJuego() {
   } else if (opcionMenu === "3") {
     alert("Hasta luego!");
     return
-  } else {
-    alert("Opción no válida.");
-    return;
   }
 
   // === BUCLE DE ESCENAS ===
@@ -249,7 +246,7 @@ function ejecutarEscenas() {
           break;
         } else {
           alert("¡Gracias por jugar!");
-          partida.escenaActual = 6;
+          partida.escenaActual = escenaInicial;
         }
       } else {
         alert("Opción no válida.");
@@ -298,7 +295,7 @@ function ejecutarEscenas() {
             break;
           } else {
             alert("¡Gracias por jugar!");
-            partida.escenaActual = 7;
+            partida.escenaActual = escenaInicial;
           }
         } else {
           alert("No tienes llave misteriosa para abrir el cuarto secreto.");
@@ -322,7 +319,7 @@ function ejecutarEscenas() {
           break;
         } else {
           alert("¡Gracias por jugar!");
-          partida.escenaActual = 7;
+          partida.escenaActual = escenaInicial;
         }
       }
       
