@@ -68,11 +68,15 @@ function iniciarJuego(escenaInicial) {
     if (!cargarPartida()) {
       alert("No se pudo cargar la partida. Iniciando nueva partida.");
       partida.escenaActual = 1;
-    }
-  } else if (opcionMenu === "3") {
+  }
+} else if (opcionMenu === "3") {
     alert("Hasta luego!");
     return
+} else {
+    alert("Opción no válida.");
+    return;
   }
+
 
   // === BUCLE DE ESCENAS ===
   ejecutarEscenas();
